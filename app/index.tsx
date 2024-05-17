@@ -1,17 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Link } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
 
-
-export default function App() {
+const RootLayout = () => {
   return (
     <View style={styles.container}>
-      <Text>StorTime App</Text>
-      <StatusBar style="auto" />
-      <Link href="/profile" style={{ color: "blue"}}>Go to Profile</Link>
+      <Text style={{ fontFamily: 'Raleway-Black', fontSize: 30 }}>
+        Root Layout
+      </Text>
+      <Link href='/profile' style={{ color: 'blue', fontFamily: 'Raleway-Light', fontSize: 20 }}>
+        Go to Profile
+      </Link>
+      <StatusBar style='auto' />
     </View>
   );
-}
+};
+
+export default RootLayout;
 
 const styles = StyleSheet.create({
   container: {

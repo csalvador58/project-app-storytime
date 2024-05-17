@@ -1,8 +1,7 @@
 {
   "expo": {
-    "name": "Storytime",
-    "slug": "storytime",
-    "scheme": "storytime",
+    "name": "expo-storytime",
+    "slug": "expo-storytime",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -12,9 +11,6 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
     "ios": {
       "supportsTablet": true
     },
@@ -27,6 +23,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
+    "scheme": "storytime",
     "plugins": [
       "expo-router"
     ]

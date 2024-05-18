@@ -8,8 +8,11 @@ const RootLayout = () => {
       <Text style={{ fontFamily: 'Raleway-Black', fontSize: 30 }}>
         Root Layout
       </Text>
-      <Link href='/profile' style={{ color: 'blue', fontFamily: 'Raleway-Light', fontSize: 20 }}>
-        Go to Profile
+      <Link
+        href='/home'
+        style={{ color: 'blue', fontFamily: 'Raleway-Light', fontSize: 20 }}
+      >
+        Go to Home
       </Link>
       <StatusBar style='auto' />
     </View>

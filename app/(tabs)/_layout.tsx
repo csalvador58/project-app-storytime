@@ -1,5 +1,4 @@
-import { Image, StyleSheet, Text, View } from 'react-native';
-import { Tabs, Redirect } from 'expo-router';
+import { Tabs } from 'expo-router';
 import Icons from '../../icons';
 
 const TabsLayout = () => {
@@ -7,7 +6,7 @@ const TabsLayout = () => {
     <>
       <Tabs
         screenOptions={{
-          tabBarShowLabel: false,
+          tabBarShowLabel: true,
           tabBarActiveTintColor: '#EFE9E7',
           tabBarInactiveTintColor: '#607B7D',
           tabBarStyle: {
@@ -63,10 +62,3 @@ const TabsLayout = () => {
 };
 
 export default TabsLayout;
-
-const styles = StyleSheet.create({
-  image: {
-    width: 25,
-    height: 25,
-  },
-});

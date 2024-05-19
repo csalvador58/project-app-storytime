@@ -1,20 +1,23 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { Link } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
+import { ImageBackground, ScrollView, StyleSheet, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import Hero from '../components/Hero';
 
 const RootLayout = () => {
   return (
-    <View style={styles.container}>
-      <Text style={{ fontFamily: 'Raleway-Black', fontSize: 30 }}>
-        Root Layout
-      </Text>
-      <Link
-        href='/home'
-        style={{ color: 'blue', fontFamily: 'Raleway-Light', fontSize: 20 }}
-      >
-        Go to Home
-      </Link>
-      <StatusBar style='auto' />
+    <View style={styles.backgroundContainer}>
+      <SafeAreaView style={styles.safeArea}>
+        <ImageBackground
+          source={require('../assets/images/logo.png')}
+          style={styles.imageBackground}
+          resizeMode='repeat'
+        >
+          <ScrollView contentContainerStyle={styles.scrollView}>
+            <View style={styles.viewContainer}>
+              <Hero />
+            </View>
+          </ScrollView>
+        </ImageBackground>
+      </SafeAreaView>
     </View>
   );
 };
@@ -22,10 +25,24 @@ const RootLayout = () => {
 export default RootLayout;
 
 const styles = StyleSheet.create({
-  container: {
+  safeArea: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+  },
+  scrollView: {
+    flexGrow: 1,
+  },
+  backgroundContainer: {
+    flex: 1,
+    backgroundColor: 'black',
+  },
+  imageBackground: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  viewContainer: {
+    flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
 });
